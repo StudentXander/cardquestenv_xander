@@ -57,6 +57,23 @@ class PokemonCard(BaseModel):
     evolution_stage = models.CharField(max_length=250, null=True, blank=True)
     abilities = models.CharField(max_length=250, null=True, blank=True)
 
+    def show_info(self):
+        print(
+            f"Name: {self.name}\n"
+            f"Rarity: {self.rarity}\n"
+            f"HP: {self.hp}\n"
+            f"Card Types: {(self.card_type)}\n"
+            f"Attack: {self.attack}\n"
+            f"Description: {self.description}\n"
+            f"Weaknesses: {(self.weaknesses)}\n"
+            f"Card Number: {self.card_number}\n"
+            f"Release Date: {self.release_date}\n"
+            f"Evolution Stage: {self.evolution_stage}\n"
+            f"Special Abilities: {(self.abilities)}"
+        )
+    def __str__(self):
+        return self.name
+
 class Collection(BaseModel):
     card = models.ForeignKey(PokemonCard, blank=True, null=True, on_delete=models.CASCADE)
     trainer = models.ForeignKey(Trainer, blank=True, null=True, on_delete=models.CASCADE)
