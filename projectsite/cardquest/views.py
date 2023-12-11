@@ -8,8 +8,8 @@ class HomePageView(ListView):
     context_object_name = 'home'
     template_name = "base.html"
     def get_context_data(self, **kwargs):
-       context = super().get_context_data(**kwargs)
-       return context
+        context = super().get_context_data(**kwargs)
+        return context
 
 class TrainerList(ListView):
     model = Trainer
@@ -20,7 +20,7 @@ class TrainerList(ListView):
 class PokemonCardList(ListView):
     model = PokemonCard
     context_object_name = 'pokemon_cards'
-    template_name = 'pokemon-cards.html'
+    template_name = 'Pokemon_cards.html'
     paginate_by = 20
 
 class CollectionList(ListView):
@@ -42,4 +42,4 @@ def my_view(request):
     for card in pokemon_cards:
         print(f"{card.name}: {card.image_url}")
 
-    return render(request, 'pokemon-cards.html', {'pokemon_cards': pokemon_cards})
+    return render(request, 'Pokemon_cards.html', {'Pokemon_cards': pokemon_cards})
