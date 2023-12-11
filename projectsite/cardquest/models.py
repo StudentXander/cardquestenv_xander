@@ -17,6 +17,7 @@ class Trainer(BaseModel):
     def __str__(self):
         return self.name
     
+    '''
     def __init__(self, name, birthdate, location, email):
         self.name = name
         self.birthdate = birthdate
@@ -30,7 +31,8 @@ class Trainer(BaseModel):
             f"Location: {self.location}\n"
             f"Email: {self.email}"
         )
-
+'''
+        
 class PokemonCard(BaseModel):
     RARITY_CHOICES = (
         ('Common', 'Common'),
