@@ -16,6 +16,20 @@ class Trainer(BaseModel):
 
     def __str__(self):
         return self.name
+    
+    def __init__(self, name, birthdate, location, email):
+        self.name = name
+        self.birthdate = birthdate
+        self.location = location
+        self.email = email
+
+    def show_info(self):
+        print(
+            f"Name: {self.name}\n"
+            f"Age: {self.birthdate}\n"
+            f"Location: {self.location}\n"
+            f"Email: {self.email}"
+        )
 
 class PokemonCard(BaseModel):
     RARITY_CHOICES = (

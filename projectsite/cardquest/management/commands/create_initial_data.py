@@ -124,6 +124,8 @@ class Command(BaseCommand):
         trainer10 = Trainer(name="Cedric" ,birthdate= "2004-06-02" ,location= "Bunkhose" ,email= "cedric@pokemon.com")
         trainer10.save()
 
+        
+
         pass
 
 

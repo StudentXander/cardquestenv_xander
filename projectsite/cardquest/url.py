@@ -1,5 +1,5 @@
 from django.urls import path
-from django.views import HomePageView
+from django.views import HomePageView, TrainerList
 from cardquest import views
 
 urlpatterns = [
