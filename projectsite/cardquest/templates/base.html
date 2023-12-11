@@ -10,7 +10,7 @@
     <link rel="stylesheet" href= "{% static 'CSS/style.css' %}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
-    <title>Pokemon | Home</title>
+    <title>{% block title %} Cardquest Master {% endblock %}</title>
   </head>
   <body>
     <!--NAVBAR-->
@@ -23,12 +23,15 @@
 
     <!--CONTENT-->
     <main>
-      <section class="home-content"></section>
+      {% block content %}
+      {% endblock %}
     </main>
       
     
 
-    <footer>
+    <footer> 
+        {% include 'includes/footer.html' %}
+            <!--
       <br />
       <br />
       <p>
@@ -46,11 +49,11 @@
         <a href="https://instagram.com/youraccount" target="_blank" class="icon-link">
           <i class="fab fa-instagram"></i>
         </a>
-        <!-- Add other social media icons similarly -->
+         Add other social media icons similarly 
       </div>
       <p>
         &copy; 2023 YourWebsiteName. All Rights Reserved.
-      </p>
+      </p> -->
   </footer>
   </body>
 </html>
