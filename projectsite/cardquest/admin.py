@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from django.contrib import admin
-from .models import PokemonCard, Trainer
+from .models import PokemonCard, Trainer, Collection
 
 # admin.site.register(PokemonCard)
 @admin.register(PokemonCard)
