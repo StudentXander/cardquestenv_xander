@@ -15,8 +15,8 @@
   <body>
     <!--NAVBAR-->
     <section class="navbar">
-      <a href="base.html" class="btn" id="active"> Home </a>
-      <a href="trainers.html" class="btn"> Trainer </a>
+      <a href="{% url 'home' %}" class="btn" id="active"> Home </a>
+      <a href="{% url 'trainer-list' %}" class="btn"> Trainer </a>
       <a href="{% url 'pokemon-card-list' %}" class="btn"> Pokemon Card </a>
       <a href="collections.html" class="btn"> Collection </a>
     </section>

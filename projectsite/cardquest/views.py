@@ -13,19 +13,19 @@ class HomePageView(ListView):
 
 class TrainerList(ListView):
     model = Trainer
-    context_object_name = 'trainer'
+    context_object_name = 'trainer-list'
     template_name = 'trainers.html'
     paginate_by =15
 
 class PokemonCardList(ListView):
     model = PokemonCard
-    context_object_name = 'pokemon_cards'
+    context_object_name = 'pokemon-card-list'
     template_name = 'Pokemon_cards.html'
     paginate_by = 20
 
 class CollectionList(ListView):
     model = Collection
-    context_object_name = 'collections'
+    context_object_name = 'collections-list'
     template_name = "collections.html"
 
     def get_context_data(self, **kwargs):
